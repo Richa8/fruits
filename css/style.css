@@ -178,5 +178,23 @@ header ul li a.active{
 }
 @media(max-width: 991px)
 {
-	
+	.bg::before{
+		display: none;
+	}
+	.content{
+		flex-direction: column;
+		align-items: center;
+	}
+	.content .textBox {
+    position: relative;
+    max-width: 600px;
+    margin-bottom: 100px;
+}
+	.content .imgBox{
+	justify-content: center;
+}
+.lower_nav {
+    bottom: 60px;
+}
+
 }
