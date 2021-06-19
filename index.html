@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Revision of fruits website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<section>
+		<div class="bg"></div>
+		<header>
+			<a href="#" class="logo">Fruits</a>
+			<ul>
+				<li><a href="#" class="active">Menu</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Newcomers</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<div class="content">
+			<div class="textBox">
+				<h2>Eat Fresh Everyday</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. laborum.</p>
+				<a href="#">Learn More</a>
+			</div>
+			<div class="imgBox">
+				<img src="images/apple.png" class="fruits">
+			</div>
+		</div>
+		<div class="lower_nav">
+			<ul class="flexible">
+				<li><a href="#" class="check active" onclick="classChange(0),changeImg('images/apple.png'),changeColour('#FF6633')"><img src="images/apple.png" ></a></li>
+				<li><a href="#" onclick="classChange(1),changeImg('images/dragonFruits.png'),changeColour('#ff66cc')"><img src="images/dragonFruits.png"></a></li>
+				<li><a href="#" onclick="classChange(2),changeImg('images/mango.png'),changeColour('#ff9933')"><img src="images/mango.png"></a></li>
+				<li><a href="#" onclick="classChange(3),changeImg('images/pineapple.png'),changeColour('#66cc66')"><img src="images/pineapple.png"></a></li>
+				<li><a href="#" onclick="classChange(4),changeImg('images/watermelon.png'),changeColour('#ff0066')"><img src="images/watermelon.png"></a></li>
+			</ul>
+		</div>
+		 
+			<ul class="social">
+				<li><a href="#"><img src="images/facebook.png"></a></li>
+				<li><a href="#"><img src="images/twitter.png"></a></li>
+				<li><a href="#"><img src="images/instagram.png"></a></li>
+			</ul>
+		
+	</section>
+	<script type="text/javascript">
+		function classChange(num){
+			let el = document.querySelectorAll(".flexible li a");
+			for (var i = el.length - 1; i >= 0; i--) {
+				if(i==num){
+					el[i].className = "check active";
+				}
+				else{
+					el[i].className = "check";
+				}
+			}
+		}
+
+		function changeImg(image){
+			document.querySelector('.fruits').src = image;
+		}
+		function changeColour(col){
+			document.querySelector('.bg').style.background = col;
+		}
+	</script>
+</body>
+</html>
